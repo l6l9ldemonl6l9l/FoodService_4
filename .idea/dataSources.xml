@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="food@localhost" uuid="67a47161-b3a9-45f0-b8dc-d1740f873ec7">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/food</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="food" uuid="e8ba8fb4-1c85-4767-b7b4-bb8e2ce80e47">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1:5432/food</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="foodService/Hibernate" uuid="f36540af-15a4-4871-9343-39280175bb30">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate</remarks>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/food</jdbc-url>
+    </data-source>
+  </component>
+</project>
