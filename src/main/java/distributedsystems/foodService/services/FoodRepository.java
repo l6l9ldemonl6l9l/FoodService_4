@@ -7,6 +7,6 @@ import java.util.UUID;
 
 @Repository
 public interface FoodRepository extends JpaRepository <Food, UUID > {
-    Food findByName(String kindFood);
-    Food findByFoodId(UUID id);
+    Food findByName(String name);
+    Food findFoodById(UUID id);
 }

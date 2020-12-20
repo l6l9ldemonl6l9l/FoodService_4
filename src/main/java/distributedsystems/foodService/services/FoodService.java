@@ -12,7 +12,7 @@ public interface FoodService {
 
     Food getById(UUID id);
 
-    Food getByName(String kindFood);
+    Food getByName(String name);
 
     void deleteFoodById(UUID id);
 }

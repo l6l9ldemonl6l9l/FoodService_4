@@ -31,8 +31,8 @@ public final class FoodServiceImpl implements FoodService {
     }
 
     @Override
-    public Food getByName(String kindFood) {
-        return FoodRepository.findByName(kindFood);
+    public Food getByName(String name) {
+        return FoodRepository.findByName(name);
     }
 
     @Override

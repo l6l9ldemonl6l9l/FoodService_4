@@ -1,7 +1,7 @@
 package distributedsystems.foodService.model;
 
-import distributedsystems.foodService.FoodRequest;
-import distributedsystems.foodService.FoodResponse;
+import distributedsystems.Food.FoodRequest;
+import distributedsystems.Food.FoodResponse;
 import lombok.Data;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 
@@ -19,29 +19,29 @@ public final class Food {
     private UUID id;
     @Column(unique = true)
     private int taste;
-    private String kindFood;
+    private String name;
 
     public Food() {
         id = UUID.randomUUID();
     }
 
-    public Food(UUID id, int taste, String kindFood) {
+    public Food(UUID id, int taste, String name) {
         this.taste = taste;
-        this.kindFood = kindFood;
+        this.name = name;
         this.id = id;
     }
 
     public static Food fromFoodRequest(FoodRequest foodRequest) {
         return new Food(UUID.randomUUID(),
                 foodRequest.getTaste(),
-                foodRequest.getKindFood());
+                foodRequest.getName());
     }
 
     public FoodResponse toFoodResponse() {
         return FoodResponse.newBuilder().
                 setId(id.toString()).
                 setTaste(taste).
-                setKindFood(kindFood).
+                setName(name).
                 build();
     }
 }

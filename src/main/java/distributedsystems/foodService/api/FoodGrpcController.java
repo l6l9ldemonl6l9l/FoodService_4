@@ -1,6 +1,6 @@
 package distributedsystems.foodService.api;
 
-import distributedsystems.foodService.*;
+import distributedsystems.Food.*;
 import distributedsystems.foodService.model.Food;
 import distributedsystems.foodService.services.FoodService;
 import io.grpc.stub.StreamObserver;
@@ -48,7 +48,7 @@ public class FoodGrpcController extends FoodServiceGrpc.FoodServiceImplBase {
 
     @Override
     public void byName(FoodByNameRequest request, StreamObserver<FoodResponse> responseObserver) {
-        Food Food = FoodService.getByName(request.getKindFood());
+        Food Food = FoodService.getByName(request.getName());
         responseObserver.onNext(Food.toFoodResponse());
         responseObserver.onCompleted();
     }
